@@ -11,7 +11,7 @@ You can do it in 4 steps:
 
 * install Ansible
 
-* git clone git@github.com:davidemoro/ansible_localconf.git
+* git clone git@github.com:tierratelematics/qa_starterkit.git
 
 * ansible-galaxy install -r requirements.yml
 
