@@ -1,0 +1,19 @@
+---
+- name: skype | Install dependencies
+  become: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - lib32stdc++6
+    - libc6-i386
+    - lib32gcc1
+  
+- name: skype | Fix any broken depedencies
+  become: yes
+  command: apt-get -f -y install
+   
+- name: skype | Download Skype installer
+  get_url: dest={{ skype_deb_package }} url={{ skype_url }}
+  
+- name: skype | Install Skype
+  become: yes
+  apt: deb={{ skype_deb_package }}

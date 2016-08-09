@@ -1,0 +1,12 @@
+---
+- name: Setup local
+  hosts: all
+
+  roles:
+    - common
+    - vim
+    - nvm
+#    - skype
+#    - vagrant
+    - role: angstwad.docker_ubuntu
+      become: true

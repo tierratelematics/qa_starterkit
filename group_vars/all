@@ -1,0 +1,22 @@
+---
+username: davide
+nvm_repo: "git://github.com/creationix/nvm.git"
+nvm_version: v0.29.0
+nvm_path: "~/.nvm"
+nvm_default_node_version: 0.12.7
+nvm_node_versions:
+  - 0.12.7
+nvm_packages:
+  - npm@latest
+  - gulp-cli
+  - grunt-cli
+  - bower
+  - yo
+  - jshint
+  - eslint
+skype_url: http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb
+skype_deb_package: /tmp/skype.deb
+virtualbox_url: http://download.virtualbox.org/virtualbox/5.0.10/virtualbox-5.0_5.0.10-104061~Ubuntu~trusty_amd64.deb 
+virtualbox_deb_package: /tmp/virtualbox-5.0_5.0.10-104061~Ubuntu~trusty_amd64.deb
+vagrant_url: https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb 
+vagrant_deb_package: /tmp/vagrant-1.7.4.deb

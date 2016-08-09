@@ -1,0 +1,24 @@
+---
+- name: Assures {{username}}/.vim/ dir exists
+  file: path=/home/{{username}}/{{item}} state=directory
+  with_items:
+      - .vim/autoload
+      - .vim/bundle
+
+- name: Install pathogen
+  get_url: url=https://tpo.pe/pathogen.vim dest=/home/{{username}}/.vim/autoload/pathogen.vim
+
+- name: install flake8 (needed for vim-flake8)
+  become: true
+  pip: name=flake8
+
+- name: fetch vim-flake8
+  git: repo=https://github.com/nvie/vim-flake8.git
+       dest=/home/{{username}}/.vim/bundle/vim-flake8
+
+- name: fetch syntastic
+  git: repo=https://github.com/scrooloose/syntastic.git
+       dest=/home/{{username}}/.vim/bundle/synstastic
+
+- name: Create vimrc
+  template: src=.vimrc dest=/home/{{username}}/.vimrc
