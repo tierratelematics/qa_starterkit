@@ -17,6 +17,14 @@ You can do it in 4 steps:
 
 * ansible-playbook -K playbook.yml
 
+What qa_starterkit includes
+---------------------------
+
+* python (dev, build essentials, virtualenv, pip, image support)
+* utilities (git, vim, makepasswd)
+* vim plugins (pathogen, syntax checkers, improved .vimrc)
+* PyCharm - https://www.jetbrains.com/pycharm/ (TODO)
+
 
 Requirements
 ------------
